@@ -6,7 +6,7 @@
 /*   By: jbadaire <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 14:29:02 by jbadaire          #+#    #+#             */
-/*   Updated: 2023/01/17 17:53:16 by jbadaire         ###   ########.fr       */
+/*   Updated: 2023/10/02 23:21:24 by jbadaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	text_index = 0;
 	word_index = 0;
-	if (len < 0 || needle[0] == 0 || haystack == needle)
+	if (needle[0] == 0 || haystack == needle)
 		return ((char *) haystack);
 	while (haystack[text_index] && text_index < len)
 	{
