@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbadaire <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jbadaire <jbadaire@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 10:26:30 by jbadaire          #+#    #+#             */
-/*   Updated: 2023/01/17 17:48:18 by jbadaire         ###   ########lyon.fr   */
+/*   Created: 2023/10/27 23:30:20 by jbadaire          #+#    #+#             */
+/*   Updated: 2023/10/27 23:30:20 by jbadaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 #include <stdlib.h>
@@ -86,17 +87,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (fill_array(s, c, words_list));
 }
-
-//#include <stdio.h>
-//int	main(void)
-//{
-//	char **t = ft_split(NULL, ' ');
-//	int index = 0;
-//
-//	while(t[index])
-//	{
-//		printf("%s--\n", t[index]);
-//		index++;
-//	}
-//	return (0);
-//}
