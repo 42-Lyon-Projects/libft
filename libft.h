@@ -41,6 +41,7 @@ int				ft_putstr_fd(char *s, int fd);
 size_t			ft_strlen(const char *s);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 size_t			ft_strlcpy(char *dst, const char *src, size_t size);
+size_t			ft_str_tab_len(char **tab);
 
 void			*ft_memset(void *s, int c, size_t n);
 void			*ft_memmove(void *dest, const void *src, size_t n);

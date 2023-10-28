@@ -61,6 +61,7 @@ SRCS			=				\
 	ft_lstclear.c				\
 	ft_lstiter.c				\
 	ft_base.c					\
+	ft_str_tab_len.c			\
 	get_next_line.c				\
 	get_next_line_utils.c		\
 	ft_printf/ft_printf.c		\
