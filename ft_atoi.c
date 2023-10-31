@@ -22,11 +22,11 @@ static int	ft_is_sign(int character)
 	return (character == '+' || character == '-');
 }
 
-int	ft_atoi(const char *nptr)
+long	ft_atoi(const char *nptr)
 {
-	int	index;
-	int	result;
-	int	is_pos;
+	int		index;
+	long	result;
+	int		is_pos;
 
 	index = 0;
 	is_pos = 1;
