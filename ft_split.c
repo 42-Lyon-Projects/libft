@@ -35,7 +35,7 @@ static int	count_delimiter(const char *string, char delimiter)
 	return (delimiters);
 }
 
-static void	ft_free(char **words_list)
+void	ft_free_split(char **words_list)
 {
 	int	index;
 
@@ -63,7 +63,7 @@ static char	**fill_array(const char *s, char c, char **words_list)
 			words_list[delimiters] = ft_substr(s, ((unsigned int) i), word_s);
 			if (!words_list[delimiters])
 			{
-				ft_free(words_list);
+				ft_free_split(words_list);
 				return (NULL);
 			}
 			i = i + word_s -1;
