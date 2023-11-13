@@ -60,7 +60,6 @@ SRCS			=				\
 	ft_lstdelone.c				\
 	ft_lstclear.c				\
 	ft_lstiter.c				\
-	ft_base.c					\
 	ft_str_tab_len.c			\
 	get_next_line.c				\
 	get_next_line_utils.c		\

@@ -22,6 +22,6 @@ int	ft_get_address(va_list param, char *base_array)
 	if (number == 0)
 		return (ft_putstr_fd("(nil)", 1));
 	value += ft_putstr_fd("0x", 1);
-	value += ft_base(number, 16, base_array, 0);
+	value += ft_putnbr_base(number, 16, base_array, 0);
 	return (value);
 }

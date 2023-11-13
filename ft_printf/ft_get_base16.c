@@ -17,5 +17,5 @@ int	ft_get_base16(va_list param, char *base)
 	unsigned int	number;
 
 	number = va_arg(param, unsigned int);
-	return (ft_base(number, 16, base, 0));
+	return (ft_putnbr_base(number, 16, base, 0));
 }

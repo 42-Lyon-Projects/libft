@@ -60,3 +60,22 @@ int	ft_put_unsigned_nbr_fd(unsigned int n, int fd)
 	}
 	return (value);
 }
+
+int	ft_putnbr_base(long long int number, int base_number, char base_array[], int value)
+{
+	char	character;
+
+	value = 0;
+	if (number >= (long long int)base_number)
+	{
+		value += ft_putnbr_base(number / base_number, base_number, base_array, value);
+		value += ft_putnbr_base(number % base_number, base_number, base_array, value);
+	}
+	else
+	{
+		character = base_array[number];
+		value += ft_putchar_fd(character, 1);
+		return (value);
+	}
+	return (value);
+}

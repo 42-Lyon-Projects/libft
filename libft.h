@@ -32,11 +32,11 @@ int				ft_tolower(int c);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 long			ft_atoi(const char *nptr);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
-int				ft_base(unsigned long n, int b_n, char array[], int v);
 int				ft_putchar_fd(char c, int fd);
 int				ft_putnbr_fd(int n, int fd);
 int				ft_put_unsigned_nbr_fd(unsigned int n, int fd);
 int				ft_putstr_fd(char *s, int fd);
+int				ft_putnbr_base(long long int number, int base_number, char base_array[], int value);
 
 size_t			ft_strlen(const char *s);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
