@@ -35,7 +35,8 @@ int				ft_putchar_fd(char c, int fd);
 int				ft_putnbr_fd(int n, int fd);
 int				ft_put_unsigned_nbr_fd(unsigned int n, int fd);
 int				ft_putstr_fd(char *s, int fd);
-int				ft_putnbr_base(long long int number, int base_number, char base_array[], int value);
+int				ft_putnbr_base(long long int number, int base_number, \
+char base_array[], int value);
 
 size_t			ft_strlen(const char *s);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);

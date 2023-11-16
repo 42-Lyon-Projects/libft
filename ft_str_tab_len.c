@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-size_t ft_str_tab_len(char **tab)
+size_t	ft_str_tab_len(char **tab)
 {
 	size_t	index;
 
