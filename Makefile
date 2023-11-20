@@ -19,6 +19,8 @@ INCLUDE			= libft.h
 
 SRCS			=				\
 	ft_bzero.c					\
+	ft_is_sign.c				\
+	ft_is_white_space.c			\
 	ft_isalnum.c				\
 	ft_isalpha.c				\
 	ft_isascii.c				\

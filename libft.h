@@ -6,7 +6,7 @@
 /*   By: jimmy <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 16:20:20 by jbadaire          #+#    #+#             */
-/*   Updated: 2023/10/02 23:28:41 by jbadaire         ###   ########.fr       */
+/*   Updated: 2023/11/19 15:45:26 by jbadaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,11 @@ int				ft_isascii(int c);
 int				ft_isprint(int c);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
+int				ft_is_space(int character);
+int				ft_is_sign(int character);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
-long			ft_atoi(const char *nptr);
+int				ft_atoi(const char *nptr);
+long			ft_atoi_long(const char *nptr);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 int				ft_putchar_fd(char c, int fd);
 int				ft_putnbr_fd(int n, int fd);
