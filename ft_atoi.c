@@ -3,6 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
+/*   By: jbadaire <jbadaire@student.42lyon.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/23 09:13:00 by jbadaire          #+#    #+#             */
+/*   Updated: 2023/11/23 09:13:00 by jbadaire         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
 /*   By: jbadaire <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 14:31:47 by jbadaire          #+#    #+#             */
@@ -41,7 +53,6 @@ int	ft_atoi(const char *nptr)
 	return (result);
 }
 
-
 long	ft_atoi_long(const char *nptr)
 {
 	int		index;
@@ -70,4 +81,3 @@ long	ft_atoi_long(const char *nptr)
 		result = 0 - result;
 	return (result);
 }
-
