@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_string.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbadaire <jbadaire@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: jbadaire <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/06 18:47:16 by jbadaire          #+#    #+#             */
-/*   Updated: 2023/09/12 13:56:35 by jbadaire         ###   ########.fr       */
+/*   Created: 2022/11/24 14:31:02 by jbadaire          #+#    #+#             */
+/*   Updated: 2022/11/24 14:31:55 by jbadaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../.includes/ft_printf.h"
+#include <stddef.h>
 
-int	ft_get_string(va_list param)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	char	*string;
+	size_t	index;
 
-	string = va_arg(param, char *);
-	if (string == NULL)
-		return (ft_putstr_fd("(null)", 1));
-	return (ft_putstr_fd(string, 1));
+	index = 1;
+	while (index <= n)
+	{
+		((char *) s)[index -1] = (char) c;
+		index++;
+	}
+	return (s);
 }

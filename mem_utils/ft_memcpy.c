@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_string.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbadaire <jbadaire@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: jbadaire <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/06 18:47:16 by jbadaire          #+#    #+#             */
-/*   Updated: 2023/09/12 13:56:35 by jbadaire         ###   ########.fr       */
+/*   Created: 2023/01/17 17:45:43 by jbadaire          #+#    #+#             */
+/*   Updated: 2023/01/17 17:45:55 by jbadaire         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../.includes/ft_printf.h"
+#include <stddef.h>
 
-int	ft_get_string(va_list param)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char	*string;
+	size_t	index;
 
-	string = va_arg(param, char *);
-	if (string == NULL)
-		return (ft_putstr_fd("(null)", 1));
-	return (ft_putstr_fd(string, 1));
+	if (!dest && !src)
+		return (0);
+	index = 0;
+	while (n > index)
+	{
+		((char *)dest)[index] = ((char *) src)[index];
+		index++;
+	}
+	return (dest);
 }

@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_string.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbadaire <jbadaire@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: jbadaire <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/06 18:47:16 by jbadaire          #+#    #+#             */
-/*   Updated: 2023/09/12 13:56:35 by jbadaire         ###   ########.fr       */
+/*   Created: 2022/11/24 14:30:56 by jbadaire          #+#    #+#             */
+/*   Updated: 2022/11/24 14:30:56 by jbadaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../.includes/ft_printf.h"
+#include <unistd.h>
 
-int	ft_get_string(va_list param)
+int	ft_putchar_fd(char character, int file_descriptor)
 {
-	char	*string;
-
-	string = va_arg(param, char *);
-	if (string == NULL)
-		return (ft_putstr_fd("(null)", 1));
-	return (ft_putstr_fd(string, 1));
+	return ((int)write(character, &file_descriptor, 1));
 }

@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_string.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbadaire <jbadaire@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/06 18:47:16 by jbadaire          #+#    #+#             */
-/*   Updated: 2023/09/12 13:56:35 by jbadaire         ###   ########.fr       */
+/*   Created: 2023/10/14 15:22:26 by jbadaire          #+#    #+#             */
+/*   Updated: 2023/10/14 15:22:26 by jbadaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../.includes/ft_printf.h"
+#include "../.includes/put_utils.h"
 
-int	ft_get_string(va_list param)
+int	ft_putstr_fd(char *s, int fd)
 {
-	char	*string;
+	int	index;
 
-	string = va_arg(param, char *);
-	if (string == NULL)
-		return (ft_putstr_fd("(null)", 1));
-	return (ft_putstr_fd(string, 1));
+	if (!s)
+		return (0);
+	index = 0;
+	while (s[index] && s[index] != '\0')
+	{
+		ft_putchar_fd(s[index], fd);
+		index++;
+	}
+	return (index);
 }

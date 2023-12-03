@@ -5,24 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbadaire <jbadaire@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 09:13:00 by jbadaire          #+#    #+#             */
-/*   Updated: 2023/11/23 09:13:00 by jbadaire         ###   ########.fr       */
+/*   Created: 2023/12/03 04:10:45 by jbadaire          #+#    #+#             */
+/*   Updated: 2023/12/03 04:11:10 by jbadaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jbadaire <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/24 14:31:47 by jbadaire          #+#    #+#             */
-/*   Updated: 2023/01/17 17:11:31 by jbadaire         ###   ########lyon.fr   */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include "libft.h"
+#include ".includes/libft.h"
+#include ".includes/char_utils.h"
 
 int	ft_atoi(const char *nptr)
 {
@@ -42,7 +31,7 @@ int	ft_atoi(const char *nptr)
 		if (nptr[index++] == '-')
 			is_pos = 0;
 	}
-	while (ft_isdigit(nptr[index]))
+	while (ft_is_digit(nptr[index]))
 	{
 		if (result != ((result * 10 + (is_pos * (nptr[index] - '0'))) / 10))
 			return (((is_pos + 1) / 2 / -1));
@@ -71,7 +60,7 @@ long	ft_atoi_long(const char *nptr)
 		if (nptr[index++] == '-')
 			is_pos = 0;
 	}
-	while (ft_isdigit(nptr[index]))
+	while (ft_is_digit(nptr[index]))
 	{
 		if (result != ((result * 10 + (is_pos * (nptr[index] - '0'))) / 10))
 			return (((is_pos + 1) / 2 / -1));

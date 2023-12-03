@@ -6,32 +6,32 @@
 /*   By: jbadaire <jbadaire@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 18:39:32 by jbadaire          #+#    #+#             */
-/*   Updated: 2023/09/18 08:23:56 by jbadaire         ###   ########.fr       */
+/*   Updated: 2023/12/03 03:53:22 by jbadaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "../.includes/ft_printf.h"
 
-int	ft_args_handler(char c, va_list params)
+int	ft_args_handler(char character, va_list params)
 {
 	int	value;
 
 	value = 0;
-	if (c == 'c')
+	if (character == 'c')
 		value = ft_get_char(params);
-	else if (c == 's')
+	else if (character == 's')
 		value = ft_get_string(params);
-	else if (c == 'u')
+	else if (character == 'u')
 		value = ft_get_unsigned_integer(params);
-	else if (c == 'd' || c == 'i')
+	else if (character == 'd' || character == 'i')
 		value = ft_get_integer(params);
-	else if (c == 'x')
+	else if (character == 'x')
 		value = ft_get_base16(params, "0123456789abcdef");
-	else if (c == 'X')
+	else if (character == 'X')
 		value = ft_get_base16(params, "0123456789ABCDEF");
-	else if (c == 'p')
+	else if (character == 'p')
 		value = ft_get_address(params, "0123456789abcdef");
-	else if (c == '%')
+	else if (character == '%')
 		value = ft_putchar_fd('%', 1);
 	return (value);
 }

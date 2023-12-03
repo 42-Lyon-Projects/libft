@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_string.c                                       :+:      :+:    :+:   */
+/*   ft_lst_clear.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbadaire <jbadaire@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/06 18:47:16 by jbadaire          #+#    #+#             */
-/*   Updated: 2023/09/12 13:56:35 by jbadaire         ###   ########.fr       */
+/*   Created: 2023/12/03 04:43:48 by jbadaire          #+#    #+#             */
+/*   Updated: 2023/12/03 04:43:51 by jbadaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../.includes/ft_printf.h"
+#include "../.includes/chained_utils.h"
 
-int	ft_get_string(va_list param)
+void	ft_lst_clear(t_list **lst, void (*del)(void *), \
+void (*free_func)(void *ptr))
 {
-	char	*string;
+	t_list	*tmp;
 
-	string = va_arg(param, char *);
-	if (string == NULL)
-		return (ft_putstr_fd("(null)", 1));
-	return (ft_putstr_fd(string, 1));
+	while (*lst)
+	{
+		del((*lst)->content);
+		tmp = (*lst)->next;
+		free_func(*lst);
+		*lst = tmp;
+	}
 }
