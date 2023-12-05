@@ -33,6 +33,7 @@ int				ft_is_sign(int character);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 int				ft_atoi(const char *nptr);
 long			ft_atoi_long(const char *nptr);
+long long		ft_ll_overflow_atoi(const char *str);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 int				ft_putchar_fd(char c, int fd);
 int				ft_putnbr_fd(int n, int fd);
