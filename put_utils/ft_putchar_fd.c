@@ -6,7 +6,7 @@
 /*   By: jbadaire <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 14:30:56 by jbadaire          #+#    #+#             */
-/*   Updated: 2022/11/24 14:30:56 by jbadaire         ###   ########.fr       */
+/*   Updated: 2023/12/04 22:17:25 by jbadaire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_putchar_fd(char character, int file_descriptor)
 {
-	return ((int)write(character, &file_descriptor, 1));
+	return ((int)write(file_descriptor, &character, 1));
 }

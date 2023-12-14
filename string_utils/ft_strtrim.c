@@ -30,6 +30,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!mlc)
 		return (NULL);
 	ft_memcpy(mlc, s1 + s_start, s_end - s_start);
-	mlc[s_end - s_start] = *"\0";
+	mlc[s_end - s_start] = '\0';
 	return (mlc);
 }
